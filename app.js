@@ -1,4 +1,4 @@
-// Wealth distribution data from German Bundesbank PHF 2023 study
+// Wealth distribution data from World Inequality Database
 const wealthData = [
     {'percentile': 0, 'cumulative_wealth_share': 0.0},
     {'percentile': 1, 'cumulative_wealth_share': -0.12},
@@ -218,27 +218,24 @@ function handleRangeChange() {
     updateRangeFill();
 }
 
-// Event listeners
-rangeMin.addEventListener('input', handleRangeChange);
-rangeMax.addEventListener('input', handleRangeChange);
-
 // Prevent range inputs from crossing over
 rangeMin.addEventListener('input', function() {
-    const min = parseInt(this.value);
+    const min = parseInt(rangeMin.value);
     const max = parseInt(rangeMax.value);
-    
     if (min > max) {
         rangeMax.value = min;
     }
+    handleRangeChange();
 });
 
 rangeMax.addEventListener('input', function() {
     const min = parseInt(rangeMin.value);
-    const max = parseInt(this.value);
+    const max = parseInt(rangeMax.value);
     
     if (max < min) {
         rangeMin.value = max;
     }
+    handleRangeChange();
 });
 
 // Initialize on page load
