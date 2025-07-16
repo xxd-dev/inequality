@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wealth Distribution in Germany</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Wealth Distribution in Germany (2023)</h1>
+            <p class="subtitle">Based on German Bundesbank PHF 2023 study</p>
+        </header>
+
+        <main class="main-content">
+            <section class="range-selector">
+                <div class="range-labels">
+                    <span class="range-label">Selected Range: <span id="range-display">0% to 100%</span></span>
+                </div>
+                
+                <div class="dual-range-container">
+                    <div class="dual-range-slider">
+                        <input type="range" id="range-min" min="0" max="100" value="0" class="range-input">
+                        <input type="range" id="range-max" min="0" max="100" value="100" class="range-input">
+                        <div class="range-track"></div>
+                        <div class="range-fill" id="range-fill"></div>
+                    </div>
+                    <div class="range-scale">
+                        <span>0%</span>
+                        <span>25%</span>
+                        <span>50%</span>
+                        <span>75%</span>
+                        <span>100%</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="wealth-display">
+                <div class="card wealth-card">
+                    <div class="card__body">
+                        <h2 id="percentile-description">Entire Population (0% to 100%)</h2>
+                        <div class="wealth-share">
+                            <span class="wealth-percentage" id="wealth-percentage">100.0%</span>
+                            <span class="wealth-label">of total wealth</span>
+                        </div>
+                        <p class="wealth-interpretation" id="wealth-interpretation">
+                            The entire German population owns 100% of all wealth
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="statistics">
+                <div class="stats-grid">
+                    <div class="card stat-card">
+                        <div class="card__body">
+                            <h3>Median Wealth</h3>
+                            <p class="stat-value">€103,200</p>
+                            <p class="stat-description">Half of Germans have more, half have less</p>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="card__body">
+                            <h3>Mean Wealth</h3>
+                            <p class="stat-value">€324,800</p>
+                            <p class="stat-description">Average wealth per person</p>
+                        </div>
+                    </div>
+                    <div class="card stat-card">
+                        <div class="card__body">
+                            <h3>Gini Coefficient</h3>
+                            <p class="stat-value">0.72</p>
+                            <p class="stat-description">Measure of inequality (0 = equal, 1 = maximum inequality)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <div class="card">
+                    <div class="card__body">
+                        <h3>Understanding the Data</h3>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <h4>What This Shows</h4>
+                                <p>This visualization displays how wealth is distributed among German households based on the 2023 Private Household Finance (PHF) study by the German Bundesbank. The data shows the cumulative share of total wealth owned by different percentile groups.</p>
+                            </div>
+                            <div class="info-item">
+                                <h4>How to Interpret</h4>
+                                <p>Use the slider to select any percentile range. For example, selecting 90-100 shows the wealth owned by the richest 10% of Germans. The stark inequality is evident: the top 10% own over half of all wealth, while the bottom 50% own just 3%.</p>
+                            </div>
+                            <div class="info-item">
+                                <h4>Why This Matters</h4>
+                                <p>Wealth distribution affects economic mobility, social cohesion, and policy decisions. Understanding these patterns helps inform discussions about taxation, social programs, and economic inequality in Germany.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
