@@ -3,15 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wealth Distribution in Germany</title>
+    <title>Wealth Distribution around the World</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <h1>Wealth Distribution in Germany (2023)</h1>
-            <p class="subtitle">Based on the World Inequality Database</p>
+            <h1>The <select name="distribution-type" id="distribution-type">
+                  <option value="wealth">Wealth</option>
+                  <option value="income">Income</option>
+                  <option value="emission">Emission</option>
+                </select> Distribution in 
+                <select name="countries" id="countries">
+                  <option value="DE">Germany</option>
+                  <option value="US">U.S.A.</option>
+                  <option value="FR">France</option>
+                  <option value="CA">Canada</option>
+                  <option value="JP">Japan</option>
+                  <option value="GB">G.B.</option>
+                  <option value="IT">Italy</option>
+                </select></h1>
+            
+            <p class="subtitle">Based on the <a href="https://wid.world/">[World Inequality Database]</a></p>
         </header>
 
         <main class="main-content">
@@ -43,7 +56,7 @@
                         <h2 id="percentile-description">Entire Population (0% to 100%)</h2>
                         <div class="wealth-share">
                             <span class="wealth-percentage" id="wealth-percentage">100.0%</span>
-                            <span class="wealth-label">of total wealth</span>
+                            <span class="wealth-label" id="wealth-label">of total wealth</span>
                         </div>
                         <p class="wealth-interpretation" id="wealth-interpretation">
                             The entire German population owns 100% of all wealth
@@ -77,7 +90,7 @@
                     </div>
                 </div>
             </section>
-            
+
             <section class="info-section">
                 <div class="card">
                     <div class="card__body">
@@ -85,7 +98,7 @@
                         <div class="info-grid">
                             <div class="info-item">
                                 <h4>How to Read This Data</h4>
-                                <p>The graph shows the share of total wealth owned by any selected percentile range in Germany. For example, selecting 0–50% shows the wealth held by the bottom 50% of households, which is only about 3.5%. Selecting 90–100% corresponds to the top 10%, which hold 58% of all wealth. This includes all assets such as property, financial investments, business equity, minus debts.</p>
+                                <p>The site shows the share of total wealth/income/emissions by any selected percentile range in the set country. For example, selecting 0–50% shows the wealth held by the bottom 50% of households, which is only a few percent. Selecting 90–100% corresponds to the top 10%. This includes all assets such as property, financial investments, business equity, minus debts.</p>
                             </div>
                             <div class="info-item">
                                 <h4>Why Wealth Inequality Matters</h4>
@@ -94,10 +107,10 @@
                             <div class="info-item">
                                 <h4>How You Can Help</h4>
                                 <p>Tackling wealth inequality is a complex issue, but there are steps you can take to help.<br>
-                                - Support and vote for parties that demand estate or wealth tax, like <a href="https://www.die-linke.de">[Die Linke]</a> or <a href="https://www.gruene.de/">[Bündnis 90/Die Grünen]</a><br>
+                                - Support and vote for parties that demand estate or wealth tax, typically left leaning<br>
                                 - Support small, local businesses<br>
-                                - Get informed about the issue <a href="http://ungleichheit.info">[here]</a> and share it with others<br>
-                                - Join a union, like <a href="https://www.igmetall.de">[IG Metall]</a> or <a href="https://verdi.de">[VerDi]</a>
+                                - Get informed about the issue and share it with others<br>
+                                - Join or form a union at your workplace
                             </p>
                             </div>
                         </div>
